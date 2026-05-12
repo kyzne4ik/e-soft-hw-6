@@ -1,0 +1,23 @@
+{
+  "name": "e-soft-hw-6",
+  "private": true,
+  "scripts": {
+    "task_1_1": "node --watch ./src/tasks/event-loop/task1-order-prediction/task1-order-prediction.js",
+    "task_1_2": "node --watch ./src/tasks/event-loop/io-vs-cpu/io-vs-cpu.js",
+    "task_1_3": "node --watch ./src/tasks/event-loop/blocking-server/blocking-server.js",
+    "task_1_4": "node --watch ./src/tasks/event-loop/worker-server/worker-server.js",
+    "task_2_1": "node ./src/tasks/modules/demo.cjs && node ./src/tasks/modules/demo.mjs",
+    "task_3_1": "node --watch ./src/tasks/fastify-basic/server.js",
+    "task_3_2": "node --watch ./src/tasks/fastify-crud/server.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "fastify": "^5.8.5",
+    "fastify-plugin": "^5.1.0"
+  }
+}
