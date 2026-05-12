@@ -1,0 +1,88 @@
+@baseUrl = http://localhost:3000/api
+
+GET {{baseUrl}}/categories
+
+GET {{baseUrl}}/categories/1
+
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "Мебель",
+  "description": "Товары для комфортного отдыха"
+}
+
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "Эта категория имеет невероятно длинное название, которое превышает пятьдесят символов"
+}
+
+DELETE {{baseUrl}}/categories/1
+
+
+GET {{baseUrl}}/products?categoryId=1&inStock=true
+
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "iPhone 15 Pro",
+  "price": 99000,
+  "categoryId": 1,
+  "inStock": true
+}
+
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "НЛО",
+  "price": 1000000,
+  "categoryId": 999
+}
+
+PUT {{baseUrl}}/products/1
+Content-Type: application/json
+
+{
+  "name": "Смартфон Galaxy S21 Ultra",
+  "price": 65000,
+  "categoryId": 1,
+  "inStock": true
+}
+
+
+GET {{baseUrl}}/users?role=admin
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Николай Тесла",
+  "email": "tesla@example.com",
+  "role": "customer"
+}
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Иван Клон",
+  "email": "ivan@example.com"
+}
+
+DELETE {{baseUrl}}/users/2
+
+
+GET {{baseUrl}}/products/888
+
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "Ошибка",
+  "price": "бесплатно",
+  "categoryId": 1
+}
