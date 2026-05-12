@@ -5,12 +5,12 @@ setTimeout - выполняются на фазе timers'ов,
 ```
 ```mermaid
 flowchart TD
-    timers -> pending
-    pending -> idle
-    idle -> poll
-    poll -> check
-    check -> close
-    close -> timers
+ timers ---> pending
+ pending ---> idle
+ idle ---> poll
+ poll ---> check
+ check ---> close
+ close ---> timers
 ```
 ```
 При этом *process.nextTick()* и *Promise* выполняются между любыми этапами.
